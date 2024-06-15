@@ -9,7 +9,8 @@ public class AulaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AulaApplication.class, args);
 
-		System.out.println("Hello World!");
+		Lista01 lista = new Lista01();
+		lista.ex1();
 	}
 
 }
