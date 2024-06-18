@@ -121,4 +121,53 @@ public class Lista01 {
 
         System.out.println("A autonomia é de: " + autonomia + "Km/L");
     }
+    void ex7() {
+        // Média aritmética de 4 notas
+
+        double nota1;
+        double nota2;
+        double nota3;
+        double nota4;
+        double media;
+
+        System.out.print("Digite a primeira nota: ");
+        Scanner sc = new Scanner(System.in);
+        nota1 = sc.nextDouble();
+        
+        System.out.print("Digite a segunda nota: ");
+        nota2 = sc.nextDouble();
+
+        System.out.print("Digite a terceira nota: ");
+        nota3 = sc.nextDouble();
+
+        System.out.print("Digite a quarta nota: ");
+        nota4 = sc.nextDouble();
+
+        media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        System.out.println("A média das notas é: " + media);
+
+        // Extra
+
+        if(media >= 6){
+            System.out.println("Parabéns, você foi aprovado!");
+        } else {
+            System.out.println("Que pena, tente novamente...");
+        }
+    }
+
+    void ex8() {
+        // Conversor Fahrenheit para Celsius
+
+        double f;
+        double c;
+
+        System.out.print("Digite a temperatura em Fahrenheit: ");
+        Scanner sc = new Scanner(System.in);
+        f = sc.nextDouble();
+
+        c = (f - 32) * 5/9;
+
+        System.out.println("A temperatura em Celsius é: " + c);
+    }
 }

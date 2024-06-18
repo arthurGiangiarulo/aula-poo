@@ -12,7 +12,7 @@ public class AulaApplication {
 		limpa_mac_linux();
 
 		Lista01 lista = new Lista01();
-		lista.ex6();
+		lista.ex8();
 
 		finaliza();
 	}
