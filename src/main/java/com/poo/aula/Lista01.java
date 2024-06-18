@@ -104,6 +104,21 @@ public class Lista01 {
     }
 
     void ex6() {
-        // 
+        // Autonomia do veículo
+
+        int distanciaPercorrida;
+        int litros;
+        double autonomia;
+
+        System.out.print("Digite a distancia percorrida em km: ");
+        Scanner sc = new Scanner(System.in);
+        distanciaPercorrida = sc.nextInt();
+
+        System.out.print("Digite o gasto co combustível em L: ");
+        litros = sc.nextInt();
+
+        autonomia = (distanciaPercorrida / litros);
+
+        System.out.println("A autonomia é de: " + autonomia + "Km/L");
     }
 }
