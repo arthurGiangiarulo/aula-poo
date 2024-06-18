@@ -37,4 +37,23 @@ public class Lista01 {
 
         System.out.println("Olá, " + nome + " " + sobrenome);
     }
+
+    void ex3() {
+        // Conversor de moerda R$ para $ (5.25)
+        
+        System.out.print("Digite o valor em reais (R$): ");
+        Scanner s = new Scanner(System.in);
+        double reais = s.nextDouble();
+
+        System.out.print(
+            "R$" + 
+            String.format("%.2f", reais) + 
+            " convertidos em dólar equivalem a: $" + 
+            String.format("%.2f", (reais/5.25)) 
+        );
+    }
+
+    void ex4() {
+        // 
+    }
 }
