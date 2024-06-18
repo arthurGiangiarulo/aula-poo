@@ -21,4 +21,20 @@ public class Lista01 {
 
         System.out.println("A soma dos números é: " + res);
     }
+
+    void ex2() {
+        // Pergunte nome e sobrenome e imprima na tela
+
+        String nome;
+        String sobrenome;
+
+        System.out.print("Digite seu nome: ");
+        Scanner sc = new Scanner(System.in);
+        nome = sc.next();
+
+        System.out.print("Digite seu sobrenome: ");
+        sobrenome = sc.next();
+
+        System.out.println("Olá, " + nome + " " + sobrenome);
+    }
 }
