@@ -54,6 +54,23 @@ public class Lista01 {
     }
 
     void ex4() {
-        // 
+        // antecessor e sucessor
+
+        System.out.print("Digite um número e descubra seu antecessor e sucessor: ");
+        Scanner scanner = new Scanner(System.in);
+        int numeroDigitado = scanner.nextInt();
+
+        System.out.println(
+            "O antecessor de " + 
+            numeroDigitado +
+            " é " +
+            (numeroDigitado - 1) +
+            " e seu sucessor é " +
+            (numeroDigitado + 1)
+        );
+    }
+
+    void ex5() {
+        
     }
 }
