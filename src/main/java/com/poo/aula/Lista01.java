@@ -71,6 +71,39 @@ public class Lista01 {
     }
 
     void ex5() {
-        
+        // Calcular valor de terreno baseado na área
+
+        // dimensoes => área
+        // valor do m2
+
+        int largura;
+        int comprimento;
+        int area;
+        double valorM2;
+
+        System.out.println("==== Calculadora de Terreno ====");
+        System.out.println("\nInforme as dimensões do terreno");
+
+        System.out.print("Largura: ");
+        Scanner scInt = new Scanner(System.in);
+        largura = scInt.nextInt();
+
+        System.out.print("Comprimento: ");
+        comprimento = scInt.nextInt();
+
+        area = (largura * comprimento);
+
+        System.out.print("Valor do m2: R$");
+        Scanner scDouble = new Scanner(System.in);
+        valorM2 = scDouble.nextDouble();
+
+        scDouble.close();
+        scInt.close();
+
+        System.out.println("O valor do total do terreno é R$" + String.format("%.2f", (valorM2 * area)) );
+    }
+
+    void ex6() {
+        // 
     }
 }
