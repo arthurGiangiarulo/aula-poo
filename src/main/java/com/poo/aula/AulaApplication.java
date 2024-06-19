@@ -15,7 +15,7 @@ public class AulaApplication {
 		// lista.ex8();
 
         Lista02 lista = new Lista02();
-        lista.ex1();
+        lista.ex2();
 
 		finaliza();
 	}

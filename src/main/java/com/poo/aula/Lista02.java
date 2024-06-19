@@ -24,4 +24,30 @@ public class Lista02 {
             System.out.println("O número digitado é ímpar");
         }
     }
+
+    void ex2() {
+        // Recebe 2 números e identifica o maior
+
+        int numero1;
+        int numero2;
+
+        System.out.print("Digite o primeiro número: ");
+        Scanner sc = new Scanner(System.in);
+        numero1 = sc.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        numero2 = sc.nextInt();
+
+        // Processar a resposta
+
+        if (numero1 > numero2) {
+            System.out.println("O maior número é o: " + numero1);
+        } else if (numero2 > numero1) {
+            System.out.println("O maior número é o: " + numero2);
+        } else {
+            System.out.println("Os números são iguais");
+        }
+    }
+
+    
 }
