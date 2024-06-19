@@ -153,4 +153,28 @@ public class Lista02 {
             }
         }
     }
+
+    void ex7() {
+        // Identificador de divisibilidade.
+
+        int dividendo;
+        int divisor;
+
+        System.out.print("Digite um dividendo: ");
+        Scanner sc = new Scanner(System.in);
+        dividendo = sc.nextInt();
+
+        System.out.print("Digite um divisor: ");
+        divisor = sc.nextInt();
+
+        if ( (dividendo % divisor) == 0 ) {
+            System.out.println(dividendo + " é divisível por " + divisor);
+        } else {
+            System.out.println(dividendo + " não é divisível por " + divisor);
+        }
+    }
+
+    void ex8() {
+        // Perguntas e respostas
+    }
 }
