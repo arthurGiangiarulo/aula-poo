@@ -11,8 +11,11 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		Lista01 lista = new Lista01();
-		lista.ex8();
+		// Lista01 lista = new Lista01();
+		// lista.ex8();
+
+        Lista02 lista = new Lista02();
+        lista.ex1();
 
 		finaliza();
 	}
