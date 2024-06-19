@@ -104,4 +104,53 @@ public class Lista02 {
             }
         }
     }
+    void ex6() {
+        // Notas de um aluno. Aprovado ou reprovado? Tem recuperação
+    
+        double nota1;
+        double nota2;
+        double maiorNota;
+        double menorNota;
+        double recuperação;
+        double media;
+
+        System.out.println("===== Boletim =====");
+        System.out.print("Digite a primeira nota: ");
+        Scanner sc = new Scanner(System.in);
+        nota1 = sc.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        nota2 = sc.nextDouble();
+
+        media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            System.out.println("Parabéns! Média: " + media);
+        } else {
+            System.out.println("Recuperação! Média: " + media);
+            System.out.print("Digite a nota de recuperação: ");
+            recuperação = sc.nextDouble();
+
+            // Verificar a menor nota
+            if (nota1 > nota2) {
+                maiorNota = nota1;
+                menorNota = nota2;
+            } else {
+                maiorNota = nota2;
+                menorNota = nota1;
+            }
+
+            // Recalcular a média
+            if (recuperação > menorNota) {
+                media = (maiorNota + recuperação) / 2;
+            }
+
+            // Verificar aprovação
+            if (media >= 6) {
+                System.out.println("Parabéns! Média: " + media);
+            } else {
+                System.out.println("Reprovado. Média: " + media);
+            }
+        }
+    }
 }
