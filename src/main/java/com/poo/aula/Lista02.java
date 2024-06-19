@@ -2,6 +2,8 @@ package com.poo.aula;
 
 import java.util.Scanner;
 
+import javax.sound.midi.Soundbank;
+
 public class Lista02 {
 
     void ex1() {
@@ -49,5 +51,57 @@ public class Lista02 {
         }
     }
 
-    
+    void ex4() {
+        // Pessoa maior de idade
+        // Menor que 16 nao pode entrar
+        // Entre 16 e 18 somente acompanhado
+
+        int idade;
+
+        System.out.print("Qual sua idade: ");
+        Scanner sc = new Scanner(System.in);
+        idade = sc.nextInt();
+
+        if (idade >= 18) {
+            System.out.println("Pode entrar");
+        } else if (idade < 18 && idade >= 16) {
+            System.out.println("Somente acompanhado");
+        } else {
+            System.out.println("Não pode entrar");
+        }
+    }    
+
+    void ex5() {
+        // verificação de login e senha
+
+        String login = "arthur@docente.senai.br";
+        String senha = "123Abc";
+        String loginDigitado;
+        String senhaDigitada;
+
+        System.out.println("==== Login ====");
+        System.out.print("Login: ");
+        Scanner sc = new Scanner(System.in);
+        loginDigitado = sc.nextLine();
+
+        System.out.print("Senha: ");
+        senhaDigitada = sc.nextLine();
+
+        if ( (login.equals(loginDigitado)) && (senha.equals(senhaDigitada))) {
+            System.out.println("Bem vindo!");
+        } else {
+            // Qual foi o erro?
+            // Verificação dos 2
+            //     login != loginDigitado
+            if ( !(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
+                System.out.println("Login e senha incorretos!");
+            // Verificação da senha
+            } else if ( !senha.equals(senhaDigitada) ) {
+                System.out.println("Senha incorreta!");
+            // Verificação do login
+            } else {
+                System.out.println("Login incorreto!");
+            }
+        }
+    }
 }
