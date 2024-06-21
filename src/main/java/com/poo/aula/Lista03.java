@@ -118,4 +118,58 @@ public class Lista03 {
             }
         } while (tentativas > 0 && respostaErrada);
     }
+
+    void ex6() {
+        // Piramide de asteriscos
+
+        //     *
+        //    *** 
+        //   *****
+        //  *******  
+
+        int andares;
+
+        System.out.println("Quantos andares?");
+        Scanner sc = new Scanner(System.in);
+        andares = sc.nextInt();
+
+        // Loop que imprime => 2++
+        // Loop que pula de linha (andares)
+
+        for (int i=1; i<=andares; i++) {
+            // imprime os espaços
+            for(int k=1; k<=(andares-i); k++) {
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i*2-1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    void ex7() {
+        // Retangulo
+
+        // ********
+        // ********
+        // ********
+
+        int largura;
+        int altura;
+
+        System.out.println("Qual largura do retangulo?");
+        Scanner sc = new Scanner(System.in);
+        largura = sc.nextInt();
+
+        System.out.println("Qual altura do retangulo?");
+        altura = sc.nextInt();
+
+        for (int i=0; i<altura; i++) {
+            for (int j=0; j<largura; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }  
+    }
 }
