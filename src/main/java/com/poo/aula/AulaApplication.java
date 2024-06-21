@@ -11,11 +11,11 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		// Lista01 lista = new Lista01();
-		// lista.ex8();
+		Lista03 lista = new Lista03();
+		lista.ex5();
 
-        Lista02 lista = new Lista02();
-        lista.ex7();
+        // Exemplos ex = new Exemplos();
+        // ex.ex02();
 
 		finaliza();
 	}

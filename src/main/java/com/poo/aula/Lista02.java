@@ -2,8 +2,6 @@ package com.poo.aula;
 
 import java.util.Scanner;
 
-import javax.sound.midi.Soundbank;
-
 public class Lista02 {
 
     void ex1() {
@@ -176,5 +174,12 @@ public class Lista02 {
 
     void ex8() {
         // Perguntas e respostas
+    }
+    void aula() {
+        String[] nomes = {"Yuri", "JoaoX", "Eloisa", "Antonio"};
+
+        for (String nome : nomes) {
+            System.out.println(nome);
+        }
     }
 }
