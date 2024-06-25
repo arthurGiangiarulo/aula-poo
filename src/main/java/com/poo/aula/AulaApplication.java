@@ -11,8 +11,8 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		Lista03 lista = new Lista03();
-		lista.ex7();
+		Lista04 lista = new Lista04();
+		lista.ex5();
 
         // Exemplos ex = new Exemplos();
         // ex.ex02();

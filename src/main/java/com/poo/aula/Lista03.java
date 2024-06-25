@@ -73,51 +73,50 @@ public class Lista03 {
         }
     }
 
-    void ex5() {
-        // verificação de login e senha
+    // void ex5() {
+    //     // verificação de login e senha
 
-        String login = "arthur@docente.senai.br";
-        String senha = "123Abc";
-        String loginDigitado;
-        String senhaDigitada;
-        int tentativas = 3;
-        boolean respostaErrada = true;
+    //     String login = "arthur@docente.senai.br";
+    //     String senha = "123Abc";
+    //     String loginDigitado;
+    //     String senhaDigitada;
+    //     int tentativas = 3;
+    //     boolean respostaErrada = true;
         
-        do {
-            System.out.println("==== Login ====");
-            System.out.print("Login: ");
-            Scanner sc = new Scanner(System.in);
-            loginDigitado = sc.nextLine();
+    //     do {
+    //         System.out.println("==== Login ====");
+    //         System.out.print("Login: ");
+    //         Scanner sc = new Scanner(System.in);
+    //         loginDigitado = sc.nextLine();
     
-            System.out.print("Senha: ");
-            senhaDigitada = sc.nextLine();
-            //Verifica a senha
-            if ( (login.equals(loginDigitado)) && (senha.equals(senhaDigitada))) {
-                System.out.println("Bem vindo!");
-                respostaErrada = false;
-            } else {
-                tentativas--;
-                // Qual foi o erro?
-                // Verificação dos 2
-                //     login != loginDigitado
-                if ( !(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
-                    System.out.println("Login e senha incorretos!");
-                // Verificação da senha
-                } else if ( !senha.equals(senhaDigitada) ) {
-                    System.out.println("Senha incorreta!");
-                // Verificação do login
-                } else {
-                    System.out.println("Login incorreto!");
-                }
+    //         System.out.print("Senha: ");
+    //         //Verifica a senha
+    //         if ( (login.equals(loginDigitado)) && (senha.equals(senhaDigitada))) {
+    //             System.out.println("Bem vindo!");
+    //             respostaErrada = false;
+    //         } else {
+    //             tentativas--;
+    //             // Qual foi o erro?
+    //             // Verificação dos 2
+    //             //     login != loginDigitado
+    //             if ( !(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
+    //                 System.out.println("Login e senha incorretos!");
+    //             // Verificação da senha
+    //             } else if ( !senha.equals(senhaDigitada) ) {
+    //                 System.out.println("Senha incorreta!");
+    //             // Verificação do login
+    //             } else {
+    //                 System.out.println("Login incorreto!");
+    //             }
 
-                if (tentativas == 0){
-                    System.out.println("Senha bloqueada!");
-                } else {
-                    System.out.println(tentativas + " tentativas restantes");
-                }
-            }
-        } while (tentativas > 0 && respostaErrada);
-    }
+    //             if (tentativas == 0){
+    //                 System.out.println("Senha bloqueada!");
+    //             } else {
+    //                 System.out.println(tentativas + " tentativas restantes");
+    //             }
+    //         }
+    //     } while (tentativas > 0 && respostaErrada);
+    // }
 
     void ex6() {
         // Piramide de asteriscos
