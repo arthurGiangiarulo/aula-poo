@@ -1,5 +1,7 @@
 package com.poo.aula;
 
+import java.time.LocalDate;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,11 +13,21 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		Lista04 lista = new Lista04();
-		lista.ex5();
+		// Pessoa antonio = new Pessoa();
+        // antonio.nome = "Antônio";
+        // antonio.cpf = "123456789-00";
+        // antonio.dataNascimento = LocalDate.of(2014,1,1);
+        // antonio.idade = 20;
+        // antonio.criadoEm = LocalDate.of(2024,06,27);
 
-        // Exemplos ex = new Exemplos();
-        // ex.ex02();
+        // antonio.imprimeDetalhes();
+        // antonio.alterarAtributos();
+        // antonio.imprimeDetalhes();
+
+        ContaCorrente contaDoYuri = new ContaCorrente();
+        contaDoYuri.depositar(1000);
+        contaDoYuri.sacar(1200);
+        contaDoYuri.extrato();
 
 		finaliza();
 	}
