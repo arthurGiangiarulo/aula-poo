@@ -1,17 +1,18 @@
 package com.poo.aula;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class ContaCorrente {
     
     // Atributos
-    int numeroConta;
-    double saldo;
-    Cliente titular;
-    ArrayList<Operacao> extrato = new ArrayList<>();
+    private int numeroConta;
+    private double saldo;
+    Cliente titular = new Cliente();
+    private ArrayList<Operacao> extrato = new ArrayList<>();
 
     // Métodos
-    void depositar(double deposito) {
+    public void depositar(double deposito) {
         // saldo = saldo + deposito;
         saldo += deposito;
         Operacao op = new Operacao();
@@ -23,7 +24,7 @@ public class ContaCorrente {
         System.out.println("Seu novo saldo é: " + saldo + "\n");
     }
 
-    void sacar(double saque) {
+    public void sacar(double saque) {
         // Verificar se tem saldo suficiente
         if (saque > saldo) {
             System.out.println("Saldo insuficiente");
@@ -39,15 +40,24 @@ public class ContaCorrente {
         }
     }
 
-    void saldo() {
-        System.out.println("Seu saldo é: " + saldo + "\n");
+    public void transferir(double valor, ContaCorrente cc){
+        // De quam chama pra quem eu recebo de parâmetro
+        this.sacar(valor);
+        cc.depositar(valor);
     }
 
-    void extrato() {
+    public void saldo() {
+        // Lógica que pedisse a senha do cartão
+        // System.out.println("O saldo de " + titular.getNome() + " é: " + saldo + "\n");
+    }
+
+    public void extrato() {
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss ");
         for(Operacao op : extrato){
+            System.out.println("_________________________");
             System.out.println("Operação: " + op.tipo);
             System.out.println("Valor: " + op.valor);
-            System.out.println("Horário: " + op.horario);
+            System.out.println("Horário: " + op.horario.format(formatador));
             System.out.println("Saldo: " + op.saldoApos + "\n");
         }
     }

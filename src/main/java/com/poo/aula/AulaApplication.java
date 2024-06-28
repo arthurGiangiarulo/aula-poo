@@ -24,10 +24,24 @@ public class AulaApplication {
         // antonio.alterarAtributos();
         // antonio.imprimeDetalhes();
 
-        ContaCorrente contaDoYuri = new ContaCorrente();
-        contaDoYuri.depositar(1000);
-        contaDoYuri.sacar(1200);
-        contaDoYuri.extrato();
+        // ContaCorrente contaDoYuri = new ContaCorrente();
+        // contaDoYuri.titular.nome = "Yuri";
+        // contaDoYuri.depositar(1000);
+        // contaDoYuri.sacar(850);
+        // contaDoYuri.extrato();
+        // contaDoYuri.saldo();
+        // ContaCorrente contaDoLucas = new ContaCorrente();
+        // contaDoLucas.titular.nome = "Lucas";
+        // contaDoLucas.saldo();
+        // contaDoYuri.transferir(100, contaDoLucas);
+        // contaDoYuri.saldo();
+        // contaDoLucas.saldo();
+
+        // Cliente lucas = new Cliente();
+        // lucas.nome = "Lucas";
+        // lucas.setNome("Lucas");
+        // System.out.println(lucas.getNome());
+
 
 		finaliza();
 	}

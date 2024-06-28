@@ -1,7 +1,7 @@
 package com.poo.aula;
 
 public class Cliente {
-    String nome;
-    String cpf;
-    Endereco endereco;
+    private String nome;
+    private String cpf;
+    private Endereco endereco;
 }
