@@ -11,8 +11,18 @@ public class Pessoa {
     String cpf;
     LocalDate dataNascimento;
     int idade;
-    LocalDate criadoEm = LocalDate.now();
+    LocalDate criadoEm;
     Pessoa criadoPor;
+
+    // Construtores
+    public Pessoa(String cpf, String nome){
+        setCpf(cpf);
+        this.nome = nome;
+        this.criadoEm = LocalDate.now();
+    }
+    public Pessoa(){
+        
+    }
 
     //Métodos
     void imprimeDetalhes() {
@@ -29,5 +39,16 @@ public class Pessoa {
         Scanner sc = new Scanner(System.in);
         nome = sc.nextLine();
         System.out.println("Cadastro alterado com sucesso");
+    }
+    public void setCpf(String cpf) {
+        // Validações
+        this.cpf = cpf;
+    }
+    public void setNome(String nome) {
+        // Validações
+        this.nome = nome;
+    }
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

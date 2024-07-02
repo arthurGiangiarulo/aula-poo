@@ -1,6 +1,7 @@
 package com.poo.aula;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +14,9 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		// Pessoa antonio = new Pessoa();
+        Pessoa victor = new Pessoa("Victor", "123456789-00");
+        victor.setDataNascimento(LocalDate.of(2000, 1, 1));
+
         // antonio.nome = "Antônio";
         // antonio.cpf = "123456789-00";
         // antonio.dataNascimento = LocalDate.of(2014,1,1);
@@ -41,6 +44,8 @@ public class AulaApplication {
         // lucas.nome = "Lucas";
         // lucas.setNome("Lucas");
         // System.out.println(lucas.getNome());
+
+        Scanner sc = new Scanner(System.in);
 
 
 		finaliza();
