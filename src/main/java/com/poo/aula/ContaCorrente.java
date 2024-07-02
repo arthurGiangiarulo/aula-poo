@@ -42,8 +42,12 @@ public class ContaCorrente {
 
     public void transferir(double valor, ContaCorrente cc){
         // De quam chama pra quem eu recebo de parâmetro
-        this.sacar(valor);
-        cc.depositar(valor);
+        // this.sacar(valor);
+        // cc.depositar(valor);
+        // Yuri
+        this.saldo = saldo - valor;
+        // Lucas
+        cc.saldo = saldo + valor;
     }
 
     public void saldo() {

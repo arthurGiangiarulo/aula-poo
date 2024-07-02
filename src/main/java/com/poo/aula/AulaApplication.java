@@ -13,12 +13,14 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-		// Pessoa antonio = new Pessoa();
-        // antonio.nome = "Antônio";
-        // antonio.cpf = "123456789-00";
-        // antonio.dataNascimento = LocalDate.of(2014,1,1);
-        // antonio.idade = 20;
-        // antonio.criadoEm = LocalDate.of(2024,06,27);
+        int numero;
+        String nome;
+		Pessoa antonio = new Pessoa();
+        antonio.nome = "Antônio";
+        antonio.cpf = "123456789-00";
+        antonio.dataNascimento = LocalDate.of(2014,1,1);
+        antonio.idade = 20;
+        antonio.criadoEm = LocalDate.of(2024,06,27);
 
         // antonio.imprimeDetalhes();
         // antonio.alterarAtributos();
@@ -41,6 +43,9 @@ public class AulaApplication {
         // lucas.nome = "Lucas";
         // lucas.setNome("Lucas");
         // System.out.println(lucas.getNome());
+
+        Atendente atendente = new Atendente("José");
+        System.out.println(atendente.getNome());
 
 
 		finaliza();
