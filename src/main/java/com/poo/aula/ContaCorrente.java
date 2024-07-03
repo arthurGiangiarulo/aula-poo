@@ -4,12 +4,24 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class ContaCorrente {
+    private static int contador = 1000;
     
     // Atributos
     private int numeroConta;
     private double saldo;
-    Cliente titular = new Cliente();
-    private ArrayList<Operacao> extrato = new ArrayList<>();
+    private Cliente titular;
+    private ArrayList<Operacao> extrato;
+
+    // Construtores
+    public ContaCorrente(String nome, String cpf) {
+        this.titular = new Cliente(nome, cpf);
+        this.saldo = 0.0;
+        this.numeroConta = contador;
+        this.extrato = new ArrayList<>();
+        Operacao op = new Operacao("Abertura de conta");
+        extrato.add(op);
+        contador++;
+    }
 
     // Métodos
     public void depositar(double deposito) {
@@ -46,7 +58,8 @@ public class ContaCorrente {
         cc.depositar(valor);
     }
 
-    public void saldo() {
+    public double getSaldo() {
+        return this.saldo;
         // Lógica que pedisse a senha do cartão
         // System.out.println("O saldo de " + titular.getNome() + " é: " + saldo + "\n");
     }
