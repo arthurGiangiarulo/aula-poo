@@ -1,54 +1,52 @@
 package com.poo.aula;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 
 public class Pessoa {
     // Atributos
-    String nome;
-    String cpf;
-    LocalDate dataNascimento;
-    int idade;
-    LocalDate criadoEm;
-    Pessoa criadoPor;
+    private String nome;
+    private String cpf;
+    private LocalDate dataNascimento;
+    private Endereco endereco;
+    private String telefone;
 
-    // Construtores
-    public Pessoa(String cpf, String nome){
-        setCpf(cpf);
+    public Pessoa(String nome, Endereco endereco, String telefone) {
         this.nome = nome;
-        this.criadoEm = LocalDate.now();
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
     public Pessoa(){
-        
+
     }
 
-    //Métodos
-    void imprimeDetalhes() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        System.out.println("--- Dados da Pessoa ---");
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Data de Nascimento: " + dataNascimento.format(formatter));
-        System.out.println("Idade: " + idade);
-        System.out.println("-----------------------");
-    }
-    void alterarAtributos(){
-        System.out.println("Digite o novo nome: ");
-        Scanner sc = new Scanner(System.in);
-        nome = sc.nextLine();
-        System.out.println("Cadastro alterado com sucesso");
-    }
-    public void setCpf(String cpf) {
-        // Validações
-        this.cpf = cpf;
+    public String getNome() {
+        return nome;
     }
     public void setNome(String nome) {
-        // Validações
         this.nome = nome;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+    public String getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    } 
 }

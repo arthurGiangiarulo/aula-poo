@@ -14,39 +14,9 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
-        Pessoa victor = new Pessoa("Victor", "123456789-00");
-        victor.setDataNascimento(LocalDate.of(2000, 1, 1));
-
-        // antonio.nome = "Antônio";
-        // antonio.cpf = "123456789-00";
-        // antonio.dataNascimento = LocalDate.of(2014,1,1);
-        // antonio.idade = 20;
-        // antonio.criadoEm = LocalDate.of(2024,06,27);
-
-        // antonio.imprimeDetalhes();
-        // antonio.alterarAtributos();
-        // antonio.imprimeDetalhes();
-
-        // ContaCorrente contaDoYuri = new ContaCorrente();
-        // contaDoYuri.titular.nome = "Yuri";
-        // contaDoYuri.depositar(1000);
-        // contaDoYuri.sacar(850);
-        // contaDoYuri.extrato();
-        // contaDoYuri.saldo();
-        // ContaCorrente contaDoLucas = new ContaCorrente();
-        // contaDoLucas.titular.nome = "Lucas";
-        // contaDoLucas.saldo();
-        // contaDoYuri.transferir(100, contaDoLucas);
-        // contaDoYuri.saldo();
-        // contaDoLucas.saldo();
-
-        // Cliente lucas = new Cliente();
-        // lucas.nome = "Lucas";
-        // lucas.setNome("Lucas");
-        // System.out.println(lucas.getNome());
-
-        Scanner sc = new Scanner(System.in);
-
+        Aluno lucas = new Aluno();
+        lucas.setNome("Lucas");
+        System.out.println(lucas.getNome());
 
 		finaliza();
 	}
