@@ -42,6 +42,8 @@ public class AulaApplication {
         // lucas.setNome("Lucas");
         // System.out.println(lucas.getNome());
 
+        CC
+
 
 		finaliza();
 	}
