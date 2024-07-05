@@ -14,8 +14,4 @@ public class Operacao {
         this.horario = LocalDateTime.now();
         this.saldoApos = 0;
     }
-    public Operacao() {
-
-    }
-
 }

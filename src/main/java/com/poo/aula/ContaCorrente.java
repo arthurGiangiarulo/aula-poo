@@ -1,77 +1,34 @@
 package com.poo.aula;
 
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+public class ContaCorrente extends Conta {
 
-public class ContaCorrente {
-    private static int contador = 1000;
-    
-    // Atributos
-    private int numeroConta;
-    private double saldo;
-    private Cliente titular;
-    private ArrayList<Operacao> extrato;
+    private double tarifa = 1;
 
-    // Construtores
     public ContaCorrente(String nome, String cpf) {
-        this.titular = new Cliente(nome, cpf);
-        this.saldo = 0.0;
-        this.numeroConta = contador;
-        this.extrato = new ArrayList<>();
-        Operacao op = new Operacao("Abertura de conta");
-        extrato.add(op);
-        contador++;
+        super(nome, cpf);
     }
 
-    // Métodos
-    public void depositar(double deposito) {
-        // saldo = saldo + deposito;
-        saldo += deposito;
-        Operacao op = new Operacao();
-        op.tipo = "Depósito";
-        op.valor = deposito;
+    public double getTarifa() {
+        return tarifa;
+    }
+
+    public void setTarifa(double tarifa) {
+        this.tarifa = tarifa;
+    }
+
+    @Override
+    public void transferir(double valor, Conta c) {
+        this.sacar(valor);
+        cobrarTarifa();
+        c.depositar(valor);
+    }
+
+    public void cobrarTarifa() {
+        saldo -= tarifa;
+        Operacao op = new Operacao("Tarifa");
+        op.tipo = "Tarifa";
+        op.valor = tarifa;
         op.saldoApos = saldo;
         extrato.add(op);
-        System.out.println("Depósito efetuado com sucesso");
-        System.out.println("Seu novo saldo é: " + saldo + "\n");
-    }
-
-    public void sacar(double saque) {
-        // Verificar se tem saldo suficiente
-        if (saque > saldo) {
-            System.out.println("Saldo insuficiente");
-        } else {
-            saldo -= saque;
-            Operacao op = new Operacao();
-            op.tipo = "Saque";
-            op.valor = saque;
-            op.saldoApos = saldo;
-            extrato.add(op);
-            System.out.println("Saque efetuado com sucesso");
-            System.out.println("Seu novo saldo é: " + saldo + "\n");
-        }
-    }
-
-    public void transferir(double valor, ContaCorrente cc){
-        // De quam chama pra quem eu recebo de parâmetro
-        this.sacar(valor);
-        cc.depositar(valor);
-    }
-
-    public double getSaldo() {
-        return this.saldo;
-        // Lógica que pedisse a senha do cartão
-        // System.out.println("O saldo de " + titular.getNome() + " é: " + saldo + "\n");
-    }
-
-    public void extrato() {
-        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss ");
-        for(Operacao op : extrato){
-            System.out.println("_________________________");
-            System.out.println("Operação: " + op.tipo);
-            System.out.println("Valor: " + op.valor);
-            System.out.println("Horário: " + op.horario.format(formatador));
-            System.out.println("Saldo: " + op.saldoApos + "\n");
-        }
     }
 }
