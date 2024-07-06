@@ -1,13 +1,14 @@
 package com.poo.aula;
 
-public class Cliente extends Pessoa implements Autentica{
-    
-    public Cliente (String nome, String cpf) {
-        super(nome, cpf);
+public class Gerente extends Funcionario implements Autentica {
+
+    public Gerente(String nome, String cpf, String ctps, Endereco endereco) {
+        super(nome, cpf, ctps, endereco);
     }
 
     @Override
     public boolean autentica(String loginDigitado, String senhaDigitada) {
         return getLogin().equalsIgnoreCase(loginDigitado) && getSenha().equals(senhaDigitada);
     }
+
 }

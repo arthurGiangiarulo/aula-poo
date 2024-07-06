@@ -10,8 +10,6 @@ public abstract class Conta {
     protected int numeroConta;
     protected double saldo;
     protected Cliente titular;
-    protected String login;
-    protected String senha;
     protected ArrayList<Operacao> extrato;
     
     // Construtores
@@ -56,22 +54,6 @@ public abstract class Conta {
 
     public void setTitular(Cliente titular) {
         this.titular = titular;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public ArrayList<Operacao> getExtrato() {
