@@ -13,6 +13,8 @@ public class AulaApplication {
 
 		limpa_mac_linux();
 
+        System.out.println(Dia.qualDia());
+
 		finaliza();
 	}
 
