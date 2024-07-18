@@ -1,6 +1,7 @@
 package com.poo.aula;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,8 @@ public class AulaApplication {
 		SpringApplication.run(AulaApplication.class, args);
 
 		limpa_mac_linux();
+
+        Classe1.repeteLoop();
 
 		finaliza();
 	}
